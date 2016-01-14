@@ -7,7 +7,7 @@ float dy = 20;  // Change in y
 
 // Global variables for the paddle
 var paddle_width = .01;
-var paddle_height = 40000;
+var paddle_height = 40;
 
 var dist_wall = 8;
 
@@ -61,8 +61,8 @@ void draw() {
         document.getElementById("score").innerHTML = "Score = " + score;
 
         // Adding in the total hits here...
-        total += 1;
-        document.getElementById("total").innerHTML = "Total Hits = " + total;
+        //total += 1;
+        //document.getElementById("total").innerHTML = "Total Hits = " + total;
 
         if (score>highscore) {
           highscore = score;
