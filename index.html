@@ -1,26 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title> HMM </title>
+  <title> <div class="area">
+ ⚠ Hard ⚠
+</div> </title>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <style>
-    .scoreboard {
-      background-color: #2ba6cb;
-    }
+  <style>@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+ background:url('http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/noisy_net.png') repeat;
+  font-family: "Open Sans",  Impact;
+}
+.area{
+  text-align:center;
+  font-size:6.5em;
+  color:#fff;
+  letter-spacing: -7px;
+  font-weight:700;
+  text-transform:uppercase;
+  animation:blur .75s ease-out infinite;
+  text-shadow:0px 0px 5px #fff,
+      0px 0px 7px #fff;
+}
+
+@keyframes blur{
+  from{
+      text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff, 
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;}
+}
+
+
+
+
   </style>
 </head>
 
 <body>
   <div class="container">
     <div class="col-md-4 scoreboard">
-      <!--h1 id="total">Total Hits = 0</h1-->
+      <h1 id="total">Total Hits = 0</h1>
       <h1 id="highscore">High Score = 0</h1>
       <h1 id="score">Score = 0</h1>
     </div>
     <div class="col-md-8 gameboard">
       <center>
-        <h1 class="cover-heading">Get to 1</h1>
+        <h1 class="cover-heading"><div class="area">
+ ⚠ Hard ⚠
+</div></h1>
         <canvas id="pong" data-processing-sources="pong.pde"/></canvas>
       </center>
     </div>
