@@ -3,11 +3,11 @@ float ball_x;
 float ball_y;
 float ball_dir = 1; // Direction in x 
 float ball_size = 7;  // Radius of ball
-float dy = 2000;  // Change in y
+float dy = 20;  // Change in y
 
 // Global variables for the paddle
-var paddle_width = 1;
-var paddle_height = 40000;
+var paddle_width = 50;
+var paddle_height = 40;
 
 var dist_wall = 8;
 
@@ -31,7 +31,7 @@ void draw() {
     background(155,155,0);
 
     // Increment x and y by speed of ball
-    ball_x += ball_dir * 6.0;
+    ball_x += ball_dir * 600000000000000000000.0;
     ball_y += dy;
 
     // If the ball was missed... start over
@@ -48,6 +48,7 @@ void draw() {
 
     // Test to see if the ball is touching the paddle
     float paddle_x_edge = width-dist_wall-paddle_width-ball_size;
+   
 
     if((ball_x > paddle_x_edge) && (ball_y > paddle_y - paddle_height - ball_size) && 
        (ball_y < paddle_y + paddle_height + ball_size) && (ball_dir>0)) {
@@ -60,8 +61,8 @@ void draw() {
         document.getElementById("score").innerHTML = "Score = " + score;
 
         // Adding in the total hits here...
-        //total += 1;
-        //document.getElementById("total").innerHTML = "Total Hits = " + total;
+        total += 1;
+        document.getElementById("total").innerHTML = "Total Hits = " + total;
 
         if (score>highscore) {
           highscore = score;
