@@ -61,12 +61,12 @@ void draw() {
         document.getElementById("score").innerHTML = "Score = " + score;
 
         // Adding in the total hits here...
-        total += 1;
-        document.getElementById("total").innerHTML = "Total Hits = " + total;
+        //total += 1;
+        //document.getElementById("total").innerHTML = "Total Hits = " + total;
 
         if (score>highscore) {
-          //highscore = score;
-          //document.getElementById("highscore").innerHTML = "High Score = " + highscore;
+          highscore = score;
+          document.getElementById("highscore").innerHTML = "High Score = " + highscore;
         }
         // Check to see if the mouse is moving... if so calculate how fast
         if(mouseY != pmouseY) {
